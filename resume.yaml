@@ -1,0 +1,59 @@
+---
+contact:
+  name: Vinay Mehta
+  email: 'vinaykmehta@icloud.com'
+  url: 'vinaym.com'
+
+jobs:
+- company: Lambda
+  title: Product Marketing Manager
+  start: 3Q21 
+  end: 3Q22
+  workitems:
+    - 'Launched Tensorbook.' 
+- company: Flex Logix
+  title: Technical Marketing Manager
+  start: 1Q20
+  end: 3Q21
+  workitems:
+    - 'Interdisciplinary role leading technical marketing and GTM strategy for the InferX accelerators for convolutional neural networks.' 
+    - 'Created documentation (Confluence wikis, Gantt charts, slide decks) as primary communicator between senior management and engineering staff; stood up reviews, led product planning meetings, and acted as the operational executor for the CEO.'
+    - 'Built and maintain performance, power estimators for both customer engagement and internal product requirement discussions; track competitors’ products to assess our market position and value prop.'
+    - 'Run design sprints for marketing presentations, blog posts, and web seminars at industry trade shows (Linley Processor Conf., AI HW Summit) and via paid media channels (semiengineering.com/author/vinay-mehta/). '
+- company: Lyft
+  title: Hardware Engineer
+  start: 3Q18 
+  end: 1Q20
+  workitems:
+    - 'Rose to technical lead in the team that designed, built, and verified the next-generation compute hardware for Lyft’s self driving system.'
+    - 'Explored different system architectures balancing fault tolerance, reliability, and performance goals with mass, volume, thermal, and cost constraints; achieved cross team consensus from mechanical, thermal, systems, and product teams.'
+    - 'Drove product lifecycle from RFQ and vendor selection, to final integration of validated and verified system into vehicle.'
+    - 'Demonstrated quantization and concurrent execution for in-vehicle neural networks. Directly managed two summer interns evaluating edge and datacenter inference accelerators.'
+- company: Columbia ARCADE Lab
+  title: Undergrad Researcher
+  start: 2Q17 
+  end: 2Q18
+  workitems:
+    -	'Studied memory access patterns for sparse convolutional neural networks and implemented an accelerator in SystemVerilog for restricted Boltzmann machine inference.'
+    - 'Parallelized the reference baseline CPU inference implementation.'
+    - 'Synthesized bitstreams of popular RISC-V CPU cores on a Xilinx FPGA, and attempted to benchmark and evaluate their performance.'
+- company: SpaceX 
+  title: Software Intern
+  start: 2Q16 
+  end: 3Q16
+  workitems:
+    - 'Built the backend for a system that queried and downloaded part files from the central parts repository onto 3D printers in the additive manufacturing lab.'
+    -	'Maintained the interface and functionality of the Engineering Change Notice form, adding support for different Falcon 9 Blocks and Variants.'
+- company: Argosy International
+  title: Operations Intern
+  start: 2Q15 
+  end: 3Q15
+  workitems:
+    - 'Built a model to determine the location of a new aluminum honeycomb processing facility. Board of directors ultimately elected to build the facility in Alabama, following the recommendation of the model.'
+
+education:
+- school: Columbia University 
+  degree: B.S. Computer Engineering
+  year: Class of 2018
+  gpa: 3.8 / 4.0
+---

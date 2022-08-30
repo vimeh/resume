@@ -1,0 +1,12 @@
+\documentclass{resume}
+\begin{document}
+\section{Work}
+$for(jobs)$
+\section{$jobs.company$}
+\begin{itemize}
+  $for(jobs.workitems)$
+  \item $jobs.workitems$
+  $endfor$
+\end{itemize}
+$endfor$
+\end{document}
