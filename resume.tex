@@ -1,12 +1,40 @@
-\documentclass{resume}
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{multirow}
+\geometry{
+  a4paper, 
+  left=10mm,
+  top=20mm,
+  bottom=0mm
+}
+
+% Turn of section numbering
+\setcounter{secnumdepth}{0}
+
+\setlength{\parindent}{0pt}
+
 \begin{document}
+\begin{flushright}
+  \begin{tabular}{r r}
+    \multirow{3}{20em}{\Huge{$contact.name$}} 
+    &$contact.email$
+    \\&$contact.url$
+    \\&$contact.address.city$, $contact.address.state$
+  \end{tabular}
+\end{flushright}
 \section{Work}
 $for(jobs)$
-\section{$jobs.company$}
-\begin{itemize}
-  $for(jobs.workitems)$
-  \item $jobs.workitems$
-  $endfor$
-\end{itemize}
-$endfor$
+\begin{tabular}{| p{5cm} | p{0.8\textwidth} |}
+    \begin{tabular}[t]{l}
+      $jobs.company$ \\ $jobs.title$ \\ $jobs.start$ - $jobs.end$
+    \end{tabular}  
+    &
+    \begin{itemize}
+      $for(jobs.workitems)$
+        \item{$jobs.workitems$}
+      $endfor$
+    \end{itemize}
+    \hline
+\end{tabular} 
+  $endfor$ 
 \end{document}
