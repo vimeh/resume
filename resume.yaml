@@ -1,7 +1,7 @@
 ---
 contact:
   name: Vinay Mehta
-  email: 'vinaykmehta@icloud.com'
+  email: 'vkvmehta@proton.me'
   url: 'vinaym.com'
   address:
     city: Palo Alto
@@ -11,12 +11,16 @@ contact:
 jobs:
 - company: Lambda Labs
   title: Product Marketing Manager
+  skills:
+    - 'Python'
   start: 10/2021 
   end: 07/2022
   workitems:
-    - 'Launched Tensorbook.' 
+    - 'Launched an GPU laptop marketed towards deep learning engineers.' 
 - company: Flex Logix
   title: Technical Marketing Manager
+  skills:
+    - 'Python'
   start: 01/2020
   end: 08/2021
   workitems:
@@ -26,6 +30,8 @@ jobs:
     - 'Run design sprints for marketing presentations, blog posts, and web seminars at industry trade shows (Linley Processor Conf., AI HW Summit) and via paid media channels.'
 - company: Lyft
   title: Hardware Engineer
+  skills:
+    - 'Python'
   start: 08/2018 
   end: 01/2020
   workitems:
@@ -35,6 +41,8 @@ jobs:
     - 'Demonstrated quantization and concurrent execution for in-vehicle neural networks. Directly managed two summer interns evaluating edge and datacenter inference accelerators.'
 - company: SpaceX 
   title: Software Intern
+  skills:
+    - 'Java'
   start: 05/2016 
   end: 08/2016
   workitems:
@@ -42,6 +50,8 @@ jobs:
     -	'Maintained the interface and functionality of the Engineering Change Notice form, adding support for different Falcon 9 Blocks and Variants.'
 - company: Argosy International
   title: Operations Intern
+  skills:
+    - 'Python'
   start: 05/2015 
   end: 08/2015
   workitems:
@@ -53,7 +63,13 @@ education:
   year: Class of 2018
   gpa: 3.8 / 4.0
 
-skills:
-  programming:
-    - 'Python'
+programming:
+  - language: Python
+    level: Expert
+  - language: C
+    level: Proficient
+  - language: Java
+    level: Proficient 
+  - language: SQL
+    level: Proficient 
 ---

@@ -1,10 +1,15 @@
 \documentclass{article}
 \usepackage{geometry}
 \usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\setlist{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\usepackage{tabularx}
 \geometry{
   a4paper, 
   left=10mm,
-  top=20mm,
+  top=5mm,
+  right=10mm,
   bottom=0mm
 }
 
@@ -14,27 +19,54 @@
 \setlength{\parindent}{0pt}
 
 \begin{document}
+
 \begin{flushright}
   \begin{tabular}{r r}
-    \multirow{3}{20em}{\Huge{$contact.name$}} 
+    \multirow{3}{20em}{\huge\textbf{$contact.name$}} 
     &$contact.email$
     \\&$contact.url$
     \\&$contact.address.city$, $contact.address.state$
   \end{tabular}
 \end{flushright}
-\section{Work}
-$for(jobs)$
-\begin{tabular}{| p{5cm} | p{0.8\textwidth} |}
-    \begin{tabular}[t]{l}
-      $jobs.company$ \\ $jobs.title$ \\ $jobs.start$ - $jobs.end$
-    \end{tabular}  
-    &
-    \begin{itemize}
-      $for(jobs.workitems)$
-        \item{$jobs.workitems$}
-      $endfor$
-    \end{itemize}
-    \hline
-\end{tabular} 
+
+
+\begin{tabularx}{\linewidth}[t]{|l|@{}X@{}|}
+  \hline
+  \Large\textbf{Work} & \\
+  \hline
+  $^$$for(jobs)$
+  {\begin{tabular}[t]{l}
+  $jobs.company$
+  \\$jobs.title$
+  \\$jobs.start$ - $jobs.end$
+  \end{tabular}}  
+  & 
+  {\begin{tabularx}{\linewidth}[t]{X}
+  $for(jobs.workitems)$
+  \textbullet $jobs.workitems$ \\
+  $endfor$
+  \end{tabularx}} \\
+  \hline
   $endfor$ 
+  
+  \\ & \\
+  \hline
+  Education & \\
+  \hline
+
+\end{tabularx} 
+
+\section{Education}
+$for(education)$
+$education.school$
+\\$education.degree$
+\\$education.year$
+\\GPA: $education.gpa$
+$endfor$
+
+\section{Programming Experience}
+$for(programming)$
+$programming.language$ - $programming.level$ \\
+$endfor$
+
 \end{document}
