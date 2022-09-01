@@ -13,6 +13,8 @@
   bottom=0mm
 }
 
+
+
 % Turn of section numbering
 \setcounter{secnumdepth}{0}
 
@@ -31,9 +33,9 @@
 
 
 \begin{tabularx}{\linewidth}[t]{|l|@{}X@{}|}
-  \hline
+  $if(debug)$\hline$endif$
   \Large\textbf{Work} & \\
-  \hline
+  $if(debug)$\hline$endif$
   $^$$for(jobs)$
   {\begin{tabular}[t]{l}
   $jobs.company$
@@ -46,13 +48,13 @@
   \textbullet $jobs.workitems$ \\
   $endfor$
   \end{tabularx}} \\
-  \hline
+  $if(debug)$\hline$endif$
   $endfor$ 
   
   \\ & \\
-  \hline
+  $if(debug)$\hline$endif$
   Education & \\
-  \hline
+  $if(debug)$\hline$endif$
 
 \end{tabularx} 
 
