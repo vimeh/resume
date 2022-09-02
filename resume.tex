@@ -45,8 +45,8 @@
   $if(debug)$\hline$endif$
   $^$$for(jobs)$
   {\begin{tabular}[t]{l}
-  $jobs.company$
-  \\$jobs.title$
+  \textbf{$jobs.company$}
+  \\\textit{$jobs.title$}
   \\$jobs.start$ - $jobs.end$
   \end{tabular}}  
   & 
@@ -62,21 +62,28 @@
   $endfor$ 
   
   $if(debug)$\hline$endif$
-  Education & \\
+  \Large\textbf{Education} & \\
   $if(debug)$\hline$endif$
+  $^$$for(education)$
+  {\begin{tabular}[t]{l}
+  $education.school$
+  \\$education.degree$
+  \\$education.year$, GPA: $education.gpa$
+  \end{tabular}}  
+  & \\ 
+  $endfor$
+  \noalign{\bigskip}
 
+  $if(debug)$\hline$endif$
+  \Large\textbf{Software Engineering} & \\
+  $if(debug)$\hline$endif$
+  $^$$for(programming)$
+  {\begin{tabular}[t]{l}
+  $programming.language$ - $programming.level$ \\
+  \end{tabular}}  
+  & \\ 
+  $endfor$
+  \noalign{\bigskip}
 \end{tabularx} 
-
-\section{Education}
-$for(education)$
-$education.school$
-\\$education.degree$
-\\$education.year$, GPA: $education.gpa$
-$endfor$
-
-\section{Software Engineering}
-$for(programming)$
-$programming.language$ - $programming.level$ \\
-$endfor$
 
 \end{document}
