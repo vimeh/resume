@@ -3,7 +3,13 @@
 \usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{enumitem}
-\setlist{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\setlist{
+  topsep=0pt,
+  parsep=0pt,
+  partopsep=0pt,
+  leftmargin=16pt,  
+  itemsep=2pt
+}
 \usepackage{tabularx}
 \geometry{
   a4paper, 
@@ -12,6 +18,7 @@
   right=10mm,
   bottom=0mm
 }
+\hyphenpenalty=100000
 
 
 
@@ -32,7 +39,7 @@
 \end{flushright}
 
 
-\begin{tabularx}{\linewidth}[t]{|l|@{}X@{}|}
+\begin{tabularx}{\linewidth}[t]{l @{}X@{}}
   $if(debug)$\hline$endif$
   \Large\textbf{Work} & \\
   $if(debug)$\hline$endif$
@@ -43,15 +50,17 @@
   \\$jobs.start$ - $jobs.end$
   \end{tabular}}  
   & 
-  {\begin{tabularx}{\linewidth}[t]{X}
+  \begin{minipage}[t]{\linewidth}
+  \begin{itemize}
   $for(jobs.workitems)$
-  \textbullet $jobs.workitems$ \\
+  \item\begin{sloppypar}{$jobs.workitems$}\end{sloppypar}
   $endfor$
-  \end{tabularx}} \\
+  \end{itemize}
+  \end{minipage} \\
+  \noalign{\bigskip}
   $if(debug)$\hline$endif$
   $endfor$ 
   
-  \\ & \\
   $if(debug)$\hline$endif$
   Education & \\
   $if(debug)$\hline$endif$
@@ -62,11 +71,10 @@
 $for(education)$
 $education.school$
 \\$education.degree$
-\\$education.year$
-\\GPA: $education.gpa$
+\\$education.year$, GPA: $education.gpa$
 $endfor$
 
-\section{Programming Experience}
+\section{Software Engineering}
 $for(programming)$
 $programming.language$ - $programming.level$ \\
 $endfor$
