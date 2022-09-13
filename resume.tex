@@ -20,6 +20,7 @@
 }
 \hyphenpenalty=100000
 
+\usepackage[document]{ragged2e}
 
 
 % Turn of section numbering
@@ -53,7 +54,7 @@
   \begin{minipage}[t]{\linewidth}
   \begin{itemize}
   $for(jobs.workitems)$
-  \item\begin{sloppypar}{$jobs.workitems$}\end{sloppypar}
+  \item{{\raggedleft $jobs.workitems$}}
   $endfor$
   \end{itemize}
   \end{minipage} \\
@@ -66,7 +67,7 @@
   $if(debug)$\hline$endif$
   $^$$for(education)$
   {\begin{tabular}[t]{l}
-  $education.school$
+  \textbf{$education.school$}
   \\$education.degree$
   \\$education.year$, GPA: $education.gpa$
   \end{tabular}}  
@@ -77,13 +78,13 @@
   $if(debug)$\hline$endif$
   \Large\textbf{Software Engineering} & \\
   $if(debug)$\hline$endif$
-  $^$$for(programming)$
-  {\begin{tabular}[t]{l}
-  $programming.language$ - $programming.level$ \\
-  \end{tabular}}  
-  & \\ 
+  Programming Languages & 
+  {\begin{tabular}[t]{l l} 
+  $^$$for(programming.languages)$
+    $programming.languages.name$ & $programming.languages.level$ 
+  \\
   $endfor$
-  \noalign{\bigskip}
-\end{tabularx} 
+  \end{tabular}}
+  \end{tabularx} 
 
 \end{document}
