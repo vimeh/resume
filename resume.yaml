@@ -3,7 +3,7 @@ debug: ''
 
 contact:
   name: Vinay Mehta
-  email: 'vkvmehta@proton.me'
+  email: '[hello@vinaym.com](mailto:hello@vinaym.com)'
   url: 'vinaym.com'
   address:
     city: Palo Alto
@@ -18,7 +18,10 @@ jobs:
   start: 10/2021 
   end: 07/2022
   workitems:
-    - 'Launched an GPU laptop marketed towards deep learning engineers.' 
+    - 'Led the launch of a [GPU laptop](https://lambdalabs.com/deep-learning/laptops/tensorbook) built by RAZER and marketed towards deep learning engineers. Extremely successful product launch resulting in 3x sales, 40% increase in services revenue, and first coverage for the company by major tech news outlets: \[[1](https://arstechnica.com/gadgets/2022/04/razer-designed-linux-laptop-targets-ai-developers-with-deep-learning-emphasis/), [2](https://www.theverge.com/2022/4/14/23025968/razer-first-linux-laptop-lambda-tensorbook-tensorflow)\].' 
+    - 'Ran a quarter long project to develop messaging. Munged data from unnormalized sources to generate product line''s lifetime order history and customer base. Targeted those customers with a persona survey and conducted follow-up interviews to understand customer usage patterns. Identified opportunity to update pricing strategy by reducing hardware price, introducing support plans, and increasing the margins on factory dual-boot installs.'
+    - 'Project managed a cross-functional group across the company to beta test production validation hardware and OS images, design and implement a new brand direction ([landing page and packaging](https://memory.partners/project/the-deep-learning-laptop/)), proactively identify support issues, and establish manufacturing and shipping procedures.'
+    - 'Ultimately recognized that the technical aspects of my work were the most fulfilling, and that product marketing was not going to be a good long-term fit for me.'
 - company: Flex Logix
   title: Technical Marketing Manager
   skills:
@@ -27,20 +30,22 @@ jobs:
   end: 08/2021
   workitems:
     - 'Interdisciplinary role leading technical marketing and GTM strategy for the InferX accelerators for convolutional neural networks.' 
-    - 'Created documentation (Confluence wikis, Gantt charts, slide decks) as primary communicator between senior management and engineering staff; stood up reviews, led product planning meetings, and acted as the operational executor for the CEO.'
-    - 'Built and maintain performance, power estimators for both customer engagement and internal product requirement discussions; track competitors’ products to assess our market position and value prop.'
-    - 'Run design sprints for marketing presentations, blog posts, and web seminars at industry trade shows (Linley Processor Conf., AI HW Summit) and via paid media channels.'
+    - 'Consolidated Excel based customer performance estimators into a Python script with a maintainable YAML config of the accelerator architecture. Reduced the turnaround time for estimating a customer model''s performance from two weeks to 24 hours.' 
+    - 'Ran design sprints for marketing presentations, [blog posts](https://semiengineering.com/author/vinay-mehta/), and web seminars at industry trade shows ([Linley Processor Conf.](https://www.linleygroup.com/events/agenda.php?num=48&day=4), AI HW Summit) and via paid media channels.'
 - company: Lyft
   title: Hardware Engineer
   skills:
     - 'Python'
+    - 'CUDA'
+    - 'TensorRT'
   start: 08/2018 
   end: 01/2020
   workitems:
-    - 'Rose to technical lead in the team that designed, built, and verified the next-generation compute hardware for Lyft’s self driving system.'
+    - 'Rose to directly responsible individual in the team that designed, built, and verified the next-generation compute hardware for Lyft''s self driving system.'
+    - 'Demonstrated an alternate C++ inference pipeline with on-GPU HEVC decoding (NVDEC), quantized FP16 models (TensorRT), and concurrent execution of batch=1 inferences on a single GPU (Triton Inference). Resulted in adoption of TensorRT by the perception team, HEVC encoding by the camera team, and initiated a push by the systems engineering team to create requirements allowing for allocating multiple cameras to a single GPU.'
     - 'Explored different system architectures balancing fault tolerance, reliability, and performance goals with mass, volume, thermal, and cost constraints; achieved cross team consensus from mechanical, thermal, systems, and product teams.'
     - 'Drove product lifecycle from RFQ and vendor selection, to final integration of validated and verified system into vehicle.'
-    - 'Demonstrated quantization and concurrent execution for in-vehicle neural networks. Directly managed two summer interns evaluating edge and datacenter inference accelerators.'
+    - 'Directly managed [two summer interns evaluating inference accelerators](https://medium.com/wovenplanetlevel5/behind-the-scenes-interning-at-level-5-dfe2c1eb2218).'
 - company: SpaceX 
   title: Software Intern
   skills:
@@ -48,7 +53,7 @@ jobs:
   start: 05/2016 
   end: 08/2016
   workitems:
-    - 'Built the backend for a system that queried and downloaded part files from the central parts repository onto 3D printers in the additive manufacturing lab.'
+    - 'Built the Java backend for a system that queried and downloaded part files from the central parts repository onto 3D printers in the additive manufacturing lab.'
     -	'Maintained the interface and functionality of the Engineering Change Notice form, adding support for different Falcon 9 Blocks and Variants.'
 - company: Argosy International
   title: Operations Intern
@@ -57,7 +62,8 @@ jobs:
   start: 05/2015 
   end: 08/2015
   workitems:
-    - 'Built a model to determine the location of a new aluminum honeycomb processing facility. Board of directors ultimately elected to build the facility in Alabama, following the recommendation of the model.'
+    - 'Built a spreadsheet model to determine the location of a new aluminum honeycomb processing facility, aggregating by ZIP code data on wages, utility rates, commercial real estate property values, and predicted shipping costs from overseas factory and on to existing customers within North America.'
+    - 'Board of directors [ultimately elected to build the facility in Alabama](https://www.businesswire.com/news/home/20160503005025/en/Argosy-Opens-New-Facility-to-Expand-Honeycomb-Core-Market/), following the top-1 recommendation of the model.'
 
 education:
 - school: Columbia University 
@@ -66,12 +72,13 @@ education:
   gpa: 3.8 / 4.0
 
 programming:
-  - language: Python
-    level: Expert
-  - language: C
-    level: Proficient
-  - language: Java
-    level: Proficient 
-  - language: SQL
-    level: Proficient 
+  languages:
+    - name: Python
+      level: Expert
+    - name: SQL
+      level: Proficient 
+    - name: C
+      level: Proficient
+    - name: Java
+      level: Proficient 
 ---
