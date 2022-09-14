@@ -11,7 +11,7 @@ jobs:
     - name: checkout repo code
       uses: actions/checkout@v3
     - name: Convert yaml to PDF via TEX template
-      uses: docker://pandoc/latex:latest
+      uses: ./.github/actions/pandoc 
       with:
         args: >-
           resume.yaml
