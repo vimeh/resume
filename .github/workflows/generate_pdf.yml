@@ -1,0 +1,23 @@
+name: Host PDF
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Convert yaml to PDF via TEX template
+      uses: pandoc:latex
+      with:
+        args: >-
+        resume.yaml
+        --template resume.tex
+        -o vinay_mehta_resume.pdf
+    - name: Commit PDF
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        branch: actions
+        file_pattern: ./*.pdf
+        commit_message: Generate PDF
