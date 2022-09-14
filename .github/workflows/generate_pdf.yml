@@ -20,6 +20,6 @@ jobs:
     - name: Commit PDF
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        branch: actions
+        branch: main
         file_pattern: ./*.pdf
         commit_message: Generate PDF
