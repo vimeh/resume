@@ -15,12 +15,14 @@
   a4paper, 
   left=10mm,
   top=5mm,
-  right=10mm,
+  right=5mm,
   bottom=0mm
 }
 \hyphenpenalty=100000
+%\usepackage{showframe}
 
 \usepackage[document]{ragged2e}
+\usepackage{hyperref}
 
 
 % Turn of section numbering
@@ -30,15 +32,14 @@
 
 \begin{document}
 
-\begin{flushright}
-  \begin{tabular}{r r}
-    \multirow{3}{20em}{\huge\textbf{$contact.name$}} 
-    &$contact.email$
-    \\&$contact.url$
-    \\&$contact.address.city$, $contact.address.state$
+\par\smallskip\noindent\parbox{.333\textwidth}{\phantom}
+\parbox{.333\textwidth}{\hfil \huge\textbf{$contact.name$}\hfil}
+\parbox{.333\textwidth}{\hfill 
+  \begin{tabular}{r}
+  $contact.email$
+  \\$contact.address.city$, $contact.address.state$
   \end{tabular}
-\end{flushright}
-
+}
 
 \begin{tabularx}{\linewidth}[t]{l @{}X@{}}
   $if(debug)$\hline$endif$
